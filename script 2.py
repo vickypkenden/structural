@@ -55,3 +55,99 @@ num_1 = '100'
 num_2 = '200'
 print(int(num_1) + int(num_2))  # Converting strings to integers and adding
 
+#Lists, tuples, and sets
+courses = ['History', 'Math', 'Physics', 'CompSci']  # List
+print(len(courses))
+print(courses[0])  # Accessing first element
+print(courses[-1])  # Accessing last element
+print(courses[1:3])  # Slicing the list
+courses.append('Art')  # Adding an element
+courses.insert(0, 'Biology')  # Inserting at a specific position
+courses_2 = ['Education', 'Economics']
+courses.insert(0, courses_2)  # Inserting a list as an element
+courses.extend(courses_2)  # Extending the list with another list
+print(courses)
+courses.pop()  # Removing the last element
+courses.remove('Math')  # Removing a specific element
+print(courses)
+popped_course = courses.pop(0)  # Popping an element at index 0
+print(popped_course)
+courses.reverse()  # Reversing the list
+courses.sort()  # Sorting the list
+print(courses)
+courses.sort(reverse=True)  # Sorting in descending order
+print(courses)
+
+sorted_courses = sorted(courses)  # Getting a sorted copy of the list
+print(sorted_courses)
+
+#minimum and maximum
+nums = [3, 6, 2, 8, 4, 10]
+print(min(nums))
+print(max(nums))
+
+print(courses.index('Physics'))  # Finding the index of an element
+print('CompSci' in courses)  # Checking membership
+for course in courses:  # Iterating through the list
+    print(course)
+
+for index, course in enumerate(courses):  # Enumerating with index
+    print(index, course)
+
+for index, course in enumerate(courses, start=1):  # Enumerating with custom start index
+    print(index, course)
+
+course_str = ', '.join(courses)  # Joining list elements into a string
+print(course_str)
+
+new_list = course_str.split(', ')  # Splitting string back into a list
+print(new_list)
+
+#Tuples
+tuple_1 = ('History', 'Math', 'Physics', 'CompSci')  # Tuple
+print(tuple_1[0])  # Accessing first element
+# tuple_1[0] = 'Art'  # This will raise an error since tuples are immutable 
+tuple_2 = tuple_1  # Assigning tuple_1 to tuple_2
+print(tuple_2)
+#Sets
+cs_courses = {'History', 'Math', 'Physics', 'CompSci'}  # Set
+print('Math' in cs_courses)  # Checking membership
+
+art_course = {'History', 'Math', 'Art', 'Design'}
+print(cs_courses.intersection(art_course))  # Intersection
+print(cs_courses.union(art_course))  # Union
+print(cs_courses.difference(art_course))  # Difference
+
+#Empty lists, tuples, and sets
+empty_list = []
+empty_list = list()
+
+empty_tuple = ()
+empty_tuple = tuple()
+
+empty_set = set()  # Note: {} creates an empty dictionary, not a set
+empty_set = {}  # This creates an empty dictionary, not a set
+
+#Dictionaries
+student = {'name': 'John', 'age': 25, 'courses': ['Math', 'CompSci']}  # Dictionary
+print(student['name'])  # Accessing value by key
+print(student.get('age'))  # Accessing value using get method
+print(student.get('phone', 'Not Found'))  # Using get with a default value
+student['age'] = 26  # Modifying a value
+student['phone'] = '555-5555'  # Adding a new key-value pair
+print(student)
+student.update({'name': 'Jane', 'age': 27, 'address': '123 Main St'})  # Updating multiple key-value pairs
+print(student)
+del student['age']  # Deleting a key-value pair
+age = student.pop('age', 'Not Found')  # Popping a key-value pair with default
+print(age)
+
+print(len(student))  # Getting the number of key-value pairs
+print(student.keys())  # Getting all keys
+print(student.values())  # Getting all values
+print(student.items())  # Getting all key-value pairs
+
+for key, value in student.items():  # Iterating through key-value pairs
+    print(key, value)
+
+# Conditionals and booleans - if, elif, else
