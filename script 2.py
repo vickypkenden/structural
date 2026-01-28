@@ -1,4 +1,4 @@
-# Print a siple messsage to the console
+# Print a simple message to the console
 print("Hello, World!")
 
 #Working with textual data in Python
@@ -151,3 +151,32 @@ for key, value in student.items():  # Iterating through key-value pairs
     print(key, value)
 
 # Conditionals and booleans - if, elif, else
+language = 'Python'
+if language == 'Python':
+    print('Language is Python')
+
+if True:
+    print("It's true!")
+if False:
+    print("It's false!")  
+
+
+
+#For while loops
+
+nums = [1, 2, 3, 4, 5]
+for num in nums:
+    if num == 3:
+        print('Found!')
+        break
+    print(num)  
+
+for i in range(1, 11):  # range from 0 to 9
+    print(i)
+
+x = 0
+while x < 10:
+    if x == 5:
+        break
+    print(x)    
+    x += 1
