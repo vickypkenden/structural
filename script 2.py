@@ -180,3 +180,33 @@ while x < 10:
         break
     print(x)    
     x += 1
+
+#Functions
+def hello_func(greeting, name='You'):
+    return '{}, {} Function!'.format(greeting, name)
+print(hello_func('Hi', name='Michael'))
+    
+
+def student_info(*args, **kwargs):
+    print(args)
+    print(kwargs)
+course = ['Math', 'CompSci']
+info = {'name': 'John', 'age': 22}
+
+student_info(*course, **info)
+
+#Number of days per month. First value placeholder for indexing purposes.
+month_days = [0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
+
+def is_leap(year):
+    return year % 4 == 0 and (year % 100 != 0 or year % 400 == 0)
+
+def days_in_month(year, month):
+    if month < 1 or month > 12:
+        return 'Invalid Month'
+    if month == 2 and is_leap(year):
+        return 29
+    return month_days[month]
+print(days_in_month(2020, 2))  # Leap year
+print(days_in_month(2019, 2))  # Non-leap year
+#DRY - Don't Repeat Yourself
